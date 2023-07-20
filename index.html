@@ -3,12 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Indie+Flower">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
     <title>Hero</title>
 </head>
 
 <body>
-    <nav class="nav"> <a> Hero</a> <a> More</a> <a>Pics</a></nav>
+    <nav  >
+        <div class="nav-center">
+            <!-- nav header -->
+            <div class="nav-header">
+                <img src="/flower2.png" alt="logo" class="logo">
+                <button class="nav-toggle">
+                    <i class="fas fa-bars" style=" color: #e0ad1f;"></i>
+                </button>
+                
+            </div>
+            <!-- Links-->
+            <ul class="links ">
+                <li>
+                    <a> Hero
+                        <i class="fas fa-location-arrow fa-xs"></i>
+                    </a>
+                </li>
+                <li>
+                    <a> More
+                        <i class="fas fa-street-view fa-xs"></i>
+                    </a>
+                </li>
+                <li>
+                    <a> Pics
+                        <i class="fas fa-random fa-xs"></i>
+                    </a>
+                </li> 
+            </ul>
+  
+        </div>
+    </nav>
     <section class="hero">
         <!--         <img class="hero-img" src="hero.JPG" alt="hero image"> -->
         <div class="cs1"></div>
@@ -20,10 +54,12 @@
         <div class="container">
             <div class="grid-child">
                 <h1 class="title">My path</h1>
-                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio natus cumque quibusdam fuga hic quia asperiores nisi? Quo enim molestiae cumque nulla expedita non pariatur. Consectetur vero sequi facilis maxime?</p>
+                <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio natus cumque
+                    quibusdam fuga hic quia asperiores nisi? Quo enim molestiae cumque nulla expedita non pariatur.
+                    Consectetur vero sequi facilis maxime?</p>
             </div>
         </div>
-   
+
     </section>
     <section class="more"></section>
 
@@ -33,192 +69,8 @@
 
 
 
-
+    <script src="app.js"></script>
 </body>
-<style>
-    /* background: no-repeat center/80% url("../img/image.png"); */
 
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero {
-        overflow: hidden;
-        position: relative;
-        width: 100vw;
-        height: 100vh;
-        background: no-repeat center/cover
-            /* linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), */
-            url("hero.JPG");
-        background-position: cover;
-        display: flex;
-     align-items: flex-start;
-     justify-content: center;
-     padding-top:2rem;
-    
-    }
-
-    .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-    }
-
-    /* .hero-img {
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0.9;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        z-index: -500;
-        overflow: hidden; */
-        /*  filter: blur(.px); */
-        /*         filter: brightness(0.4); */
-        /*    filter: contrast(500%)  sepia(60%); */
-        /*         filter: drop-shadow(16px 16px 20px blue); */
-        /*         filter: grayscale(90%); */
-        /*         filter: hue-rotate(90deg); */
-        /*         filter: invert(75%); */
-        
-        /*         filter: saturate(30%); */
-        /*   filter: sepia(90%); */
-
-
- 
-
-
-    /*     .hero:after {
-        background: no-repeat center/100% url(hero.JPG);
-      
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-blend-mode: luminosity 22;
-
-    } */
-
-    .nav {
-
-
-        background-color: rgba(29, 28, 28, 0.872);
-        color: white;
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.25rem 2rem;
-        z-index: 200;
-
-    }
-    .title{
-        margin-bottom: 0.75rem;
-    }
-    .text{
-        letter-spacing: 0.15rem;
-        line-height: 1.5;
-    }
-     .container {
-       
-         border: 2px solid rgba(15, 15, 15, 0.615);  
-         box-shadow: 2px 2px rgba(30, 29, 29, 0.5);
-        height: 20rem;
-        width: 15rem;
-        border-radius: 5px;
-        background-color: rgba(99, 97, 97, 0.544);
-        margin-left: 2rem;
-        color: white;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-       border-radius: 8px;
-        text-align: center;
-        padding:1rem;
-        
-        
-       
-
-    }
-    .cs1{
-        position: absolute;
-        width: 80vw;
-        height: 60vh;
-    }
-    .cs2{
-        position: absolute;
-        width: 10vw;
-        height: 30vh;
-    }
-    .cs3{
-        position: absolute;
-        width: 60vw;
-        height: 20vh;
-    }
-    .cs4{
-        position: absolute;
-        width: 40vw;
-        height: 20vh;
-    }
-    .cs5{
-        position: absolute;
-        width: 20vw;
-        height: 60vh;
-    }
-    .cs6{
-        position: absolute;
-        width: 20vw;
-        height: 40vh;
-        z-index: 500;
-    }
-
-    .cs1:hover{
-        background: no-repeat center/cover  
-            url("GOPR1503.JPG");
-    }
-    .cs2:hover{
-        background: no-repeat center/cover  
-            url("IMG_0058.JPG");
-    }
-    .cs3:hover{
-        background: no-repeat center/cover  
-            url("IMG_3803.JPG");
-    }
-    .cs4:hover{
-        background: no-repeat center/cover  
-            url("YCUD5150.JPG");
-    }
-    .cs5:hover{
-        background: no-repeat center/cover  
-            url("YCUD5150.JPG");
-    }
-    .cs6:hover{
-        background: no-repeat center/cover  
-            url("IMG_1249.JPG");
-    }
-    @media screen and (min-width: 600px) {
-  .container {
-    margin-left: 0; /* Reinicia el desplazamiento en pantallas más pequeñas */
-    transform: translateX(-20vw)  translateY(-5vw)/* Mueve el div 20px hacia la izquierda en pantallas más pequeñas */
-  }
-  .hero {
-    align-items: center;
-}
-}
-
-
-   
-
-    .grid-child {}
-</style>
 
 </html>
