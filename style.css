@@ -1,25 +1,33 @@
 * {
     margin: 0;
     padding: 0;
+ 
+}
+
+body {
+    overflow-x: hidden;
     font-family: Indie Flower;
 }
 
-    .links{  /*  TO HIDE THE NAVBAR ELEMENTOS */
-        list-style-type: none; 
-        height: 0; 
-        overflow: hidden;
-        transition: .5s all;
-    }
-    .show-links{   /*  SHOW ELEMENTS */
-        height: 10rem;
+.links {
+    /*  TO HIDE THE NAVBAR ELEMENTOS */
+    list-style-type: none;
+    height: 0;
+    overflow: hidden;
+    transition: .5s all;
+}
 
-    }
+.show-links {
+    /*  SHOW ELEMENTS */
+    height: 10rem;
 
-    .links li {
-        font-size: 1.2rem;
-        padding: 0.5rem;
-        margin: 0.25rem;
-    }
+}
+
+.links li {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    margin: 0.25rem;
+}
 
 
 .hero {
@@ -27,20 +35,22 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: no-repeat center/cover
-        /* linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), */
-        url("hero.JPG");
-    background-position: cover;
+    background: linear-gradient(rgba(58, 56, 56, 0.725), rgba(66, 66, 66, 0.565)), url("IMG_3803.JPG");
     display: flex;
- align-items: flex-start;
- justify-content: center;
- padding-top:2rem;
+    align-items: flex-start;
+    justify-content: center;
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
+    padding-top: 2rem;
 
 }
-.logo{
-   height:2.5rem;
-   width: 2.5rem;
-   padding:0
+
+.logo {
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0
 }
 
 .hero::before {
@@ -65,16 +75,16 @@
     object-fit: cover;
     z-index: -500;
     overflow: hidden; */
-    /*  filter: blur(.px); */
-    /*         filter: brightness(0.4); */
-    /*    filter: contrast(500%)  sepia(60%); */
-    /*         filter: drop-shadow(16px 16px 20px blue); */
-    /*         filter: grayscale(90%); */
-    /*         filter: hue-rotate(90deg); */
-    /*         filter: invert(75%); */
-    
-    /*         filter: saturate(30%); */
-    /*   filter: sepia(90%); */
+/*  filter: blur(.px); */
+/*         filter: brightness(0.4); */
+/*    filter: contrast(500%)  sepia(60%); */
+/*         filter: drop-shadow(16px 16px 20px blue); */
+/*         filter: grayscale(90%); */
+/*         filter: hue-rotate(90deg); */
+/*         filter: invert(75%); */
+
+/*         filter: saturate(30%); */
+/*   filter: sepia(90%); */
 
 
 
@@ -93,55 +103,84 @@
     background-blend-mode: luminosity 22;
 
 } */
-.nav-center{
- 
-  
-    
-    background-color: rgba(29, 28, 28, 0.869);
-     opacity: 0.8;
+.nav-center {
+    position: fixed;
+    z-index: 5;
+   
+    background: transparent;
+    opacity: 0.8;
     color: white;
     font-size: 2rem;
-    color: rgb(199, 166, 34);
-  
-    
+   /*  color: rgb(199, 166, 34); */
+
+
 
 }
 
-.nav-header{
- 
+.nav-header {
+   
     display: flex;
     align-content: center;
-    justify-content:space-between;
-     
+    justify-content: space-between;
+
 
 }
-   
-.title{
+
+.title {
     margin-bottom: 0.75rem;
 }
-.text{
+
+.text {
     letter-spacing: 0.15rem;
     line-height: 1.5;
 }
- .container {
-   
-     border: 2px solid rgba(15, 15, 15, 0.615);  
-     box-shadow: 2px 2px rgba(30, 29, 29, 0.5);
-    height: 20rem;
-    width: 15rem;
-    border-radius: 5px;
-    background-color: rgba(99, 97, 97, 0.544);
+
+.container {
+
+/*     border: 2px solid rgba(15, 15, 15, 0.615); */
+    box-shadow: 2px 2px rgba(30, 29, 29, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(35, 34, 34, 0.253);
     margin-left: 2rem;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   border-radius: 8px;
+    color: rgb(245, 228, 228);
+    font-family: 'Lora', serif;
+    border-radius: 25px;
     text-align: center;
-    padding:1rem;
-    
-    
-   
+    margin: auto;
+    padding: 1rem;
+
+
+
+
 
 }
+
+
+.sun {
+    width: 50vw;
+    height: 50vh;
+    /*    z-index: 9000; */
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 /* .cs1{
     position: absolute;
     width: 80vw;
@@ -224,58 +263,75 @@
         opacity: .8;
 } */
 @media screen and (min-width: 600px) {
-.container {
-margin-left: 0; /* Reinicia el desplazamiento en pantallas más pequeñas */
-transform: translateX(-20vw)  translateY(-5vw)/* Mueve el div 20px hacia la izquierda en pantallas más pequeñas */
+    .container {
+        margin-left: 0;
+        /* Reinicia el desplazamiento en pantallas más pequeñas */
+        transform: translateX(20vw) translateY(-5vw)
+            /* Mueve el div 20px hacia la izquierda en pantallas más pequeñas */
+    }
+
+    .hero {
+        align-items: center;
+    }
 }
-.hero {
-align-items: center;
-}
-}
-.nav-toggle{    /*  ACA ESCONDO EL HAMBURG MENU EN PANTALLA GRANDE */
+
+.nav-toggle {
+    /*  ACA ESCONDO EL HAMBURG MENU EN PANTALLA GRANDE */
     width: 3rem;
-    background-color:  rgba(60, 58, 58, 0.869);
+    background-color: rgba(60, 58, 58, 0.869);
     border: none;
 }
 
 
- @media screen and (min-width:800px){
+@media screen and (min-width:800px) {
 
-    .nav-center{
-         
-        
+    .nav-center {
+
+
         display: flex;
         align-items: center;
         justify-content: space-between;
-      /*   padding:1rem */
+        /*   padding:1rem */
     }
-    .nav-header{
-        padding:0;
+
+    .nav-header {
+        padding: 0;
     }
-    .nav-toggle{    /*  ACA ESCONDO EL HAMBURG MENU EN PANTALLA GRANDE */
+
+    .nav-toggle {
+        /*  ACA ESCONDO EL HAMBURG MENU EN PANTALLA GRANDE */
         display: none;
     }
 
-    .links{    /*  NAVABAR MAGICCCCCC */
-        display: flex;   /* Aca esta la magia de que los links se alinean bien */
-        height: auto;      /* y aca para que tengan altura auto y no se muestren uno encima dle otro */
-       
-    }
-    .links li{
-     transition: .5s all;
-     padding:0;
-     margin:0.25rem .75rem;
-    }
-    .links li:hover{
-        transform:translateY(-0.25rem) ;
-         color: rgb(144, 144, 149);
-        background:transparent;
+    .links {
+        /*  NAVABAR MAGICCCCCC */
+        display: flex;
+        /* Aca esta la magia de que los links se alinean bien */
+        height: auto;
+        /* y aca para que tengan altura auto y no se muestren uno encima dle otro */
+
     }
 
-    .nav-center{
- 
-     padding: 0 2rem;
-        
-    
+    .links li {
+        transition: .5s all;
+        padding: 0;
+        margin: 0.25rem .75rem;
     }
- }
+
+    .links li:hover {
+        transform: translateY(-0.25rem);
+        color: rgb(144, 144, 149);
+        background: transparent;
+    }
+
+    .nav-center {
+
+        padding: 0 2rem;
+
+
+    }
+
+    .container{
+        max-width: 15rem;
+    }
+}
