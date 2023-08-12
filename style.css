@@ -7,6 +7,13 @@
 body {
     overflow-x: hidden;
     font-family: Indie Flower;
+/*     width: 100vw;
+    height: 100vh; */
+    background: linear-gradient(rgba(58, 56, 56, 0.725), rgba(66, 66, 66, 0.565)), url("IMG_3803.JPG");
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
 }
 
 .links {
@@ -15,6 +22,12 @@ body {
     height: 0;
     overflow: hidden;
     transition: .5s all;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+
 }
 
 .show-links {
@@ -35,16 +48,41 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(58, 56, 56, 0.725), rgba(66, 66, 66, 0.565)), url("IMG_3803.JPG");
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background-position:center;
-    background-size: cover;
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-attachment: fixed; /* Fija la imagen de fondo mientras se desplaza la página */
     padding-top: 2rem;
 
+}
+
+#pics{
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    /* align-items: flex-start; */
+    /* justify-content: center; */
+    padding-top: 2rem;
+    gap:1rem
+}
+.pic{
+    width:15vw;
+    height: 15vh;
+    margin:1rem;
+    border-radius: 5px;
+    background-color: brown;
+}
+
+.more{
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 2rem;
 }
 
 .logo {
@@ -52,7 +90,7 @@ body {
     width: 2.5rem;
     padding: 0
 }
-
+/* 
 .hero::before {
     content: "";
     position: absolute;
@@ -61,7 +99,7 @@ body {
     right: 0;
     bottom: 0;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-}
+} */
 
 /* .hero-img {
     position: absolute;
@@ -149,13 +187,8 @@ body {
     text-align: center;
     margin: auto;
     padding: 1rem;
-
-
-
-
-
+ 
 }
-
 
 .sun {
     width: 50vw;
